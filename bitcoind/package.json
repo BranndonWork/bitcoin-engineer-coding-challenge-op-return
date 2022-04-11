@@ -1,0 +1,19 @@
+{
+    "name": "bitcoind-data-processing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "Branndon Coelho",
+    "license": "ISC",
+    "devDependencies": {
+        "fs": "^0.0.1-security",
+        "jest": "^27.5.1"
+    },
+    "dependencies": {
+        "child_process": "^1.0.2",
+        "pg": "^8.7.3"
+    }
+}

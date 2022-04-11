@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    bitcoind:
+        volumes:
+            - './bitcoind-data:/bitcoin/.bitcoin'
+        container_name: bitcoind-node
+        ports:
+            - '8333:8333'
+            - '127.0.0.1:8332:8332'
+        environment:
+            - DISABLEWALLET=1
+            - PRINTTOCONSOLE=1
+            - PRUNE=10000
+            - RPCUSER=${BITCOIND_RPCUSER}
+            - RPCPASSWORD=${BITCOIND_RPCPASSWORD}
+        image: kylemanna/bitcoind
+        restart: always
